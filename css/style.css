@@ -1,14 +1,14 @@
-/* --- VARIABLES GLOBALES - TONALIDADES CAFÉS --- */
+/* --- VARIABLES GLOBALES - GAMA DE AZULES --- */
 :root {
-    --primary-color: #8B4513; /* Café Madera/SaddleBrown */
-    --primary-hover: #5C4033; /* Café Oscuro/DarkBrown */
-    --secondary-color: #f59e0b; /* Amarillo/Dorado para contrastar */
-    --text-dark: #27272a;
-    --text-light: #52525b;
-    --bg-light: #f4f1ea; /* Crema muy suave */
+    --primary-color: #0284c7; /* Azul Medio (Sky Blue oscuro) */
+    --primary-hover: #0369a1; /* Azul Oscuro al hacer hover */
+    --secondary-color: #38bdf8; /* Azul Claro / Cyan para contrastes */
+    --text-dark: #1e293b;
+    --text-light: #475569;
+    --bg-light: #f0f9ff; /* Fondo azul clarito casi blanco */
     --bg-white: #ffffff;
-    --bg-dark: #3E2723; /* Café muy oscuro para fondos */
-    --bg-darker: #261410; /* Casi negro/café */
+    --bg-dark: #0f172a; /* Azul muy oscuro para secciones oscuras */
+    --bg-darker: #020617; /* Fondo casi negro azulado */
     --btn-text: #ffffff;
     --transition: all 0.3s ease-in-out;
 }
@@ -34,7 +34,7 @@ body { color: var(--text-dark); line-height: 1.6; background-color: var(--bg-whi
 /* BOTONES */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 30px; border-radius: 5px; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: pointer; border: 2px solid transparent; }
 .btn-primary { background-color: var(--primary-color); color: var(--btn-text); }
-.btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 10px 15px rgba(139, 69, 19, 0.3); }
+.btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 10px 15px rgba(2, 132, 199, 0.3); }
 .btn-outline { background-color: transparent; border-color: var(--primary-color); color: var(--primary-color); }
 .btn-outline:hover { background-color: var(--primary-color); color: var(--btn-text); transform: translateY(-3px); }
 
@@ -53,9 +53,9 @@ body { color: var(--text-dark); line-height: 1.6; background-color: var(--bg-whi
 .nav-link:hover { color: var(--secondary-color); }
 .hamburger { display: none; color: white; font-size: 1.8rem; cursor: pointer; }
 
-/* HERO SECTION */
-.hero { height: 100vh; background-color: var(--bg-dark); background-image: url('../img/foto-portada.jpg'); background-size: cover; background-position: center; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(38, 20, 16, 0.85); /* Tinte oscuro café */ }
+/* HERO SECTION - Foto de Portada desde Cloudinary */
+.hero { height: 100vh; background-color: var(--bg-dark); background-image: url('https://res.cloudinary.com/bw6ntjnu/image/upload/v1791411840/foto-portada.jpg'); background-size: cover; background-position: center; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 6, 23, 0.85); /* Tinte azul oscuro */ }
 .hero-content { position: relative; z-index: 1; color: white; max-width: 900px; padding: 0 20px; }
 .hero-content h1 { font-size: 3.2rem; line-height: 1.2; margin-bottom: 20px; font-weight: 700; min-height: 120px; }
 .hero-content p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
@@ -78,25 +78,20 @@ body { color: var(--text-dark); line-height: 1.6; background-color: var(--bg-whi
 /* SERVICIOS MULTIPLES */
 .services-list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px; }
 .service-item { display: flex; align-items: flex-start; gap: 20px; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-bottom: 4px solid var(--primary-color); transition: var(--transition); }
-.service-item:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(139, 69, 19, 0.15); border-bottom-color: var(--secondary-color); }
+.service-item:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(2, 132, 199, 0.15); border-bottom-color: var(--secondary-color); }
 .service-icon-wrap { width: 60px; height: 60px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary-color); transition: var(--transition); font-size: 1.6rem; }
 .service-item:hover .service-icon-wrap { background: var(--primary-color); color: white; }
 .service-item h3 { font-size: 1.1rem; margin-bottom: 5px; color: var(--bg-dark); }
 .service-item p { margin: 0; font-size: 0.9rem; color: var(--text-light); }
 
-/* SECCIÓN PROMOCIÓN TEJA */
-.promo-section { background-image: url('../img/foto-portada.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative; padding: 100px 0; }
-.promo-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(38, 20, 16, 0.85); }
+/* SECCIÓN PROMOCIÓN TEJA - Foto de Portada desde Cloudinary */
+.promo-section { background-image: url('https://res.cloudinary.com/bw6ntjnu/image/upload/v1791411840/foto-portada.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative; padding: 100px 0; }
+.promo-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 6, 23, 0.85); }
 .relative { position: relative; }
 .z-10 { z-index: 10; }
 
-/* DISEÑO DE PRECIO COMO TEXTO/BADGE */
-.price-display { margin-top: 30px; margin-bottom: 20px; }
-.price-main { display: block; font-size: 3rem; font-weight: 900; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 2px; text-shadow: 3px 3px 6px rgba(0,0,0,0.7); line-height: 1.2; }
-.price-sub { display: block; font-size: 1.3rem; font-weight: 600; color: #f4f1ea; letter-spacing: 3px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
-
-/* CARRUSEL DE 10 IMÁGENES */
-.carousel-container { position: relative; max-width: 900px; margin: 0 auto; border-radius: 15px; border: 3px solid var(--primary-color); overflow: hidden; background: #261410; }
+/* CARRUSEL DE IMÁGENES */
+.carousel-container { position: relative; max-width: 900px; margin: 0 auto; border-radius: 15px; border: 3px solid var(--primary-color); overflow: hidden; background: #020617; }
 .carousel-slide { position: relative; width: 100%; height: 500px; display: flex; align-items: center; justify-content: center; }
 .carousel-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; }
 .carousel-img.active { opacity: 1; }
@@ -128,7 +123,7 @@ body { color: var(--text-dark); line-height: 1.6; background-color: var(--bg-whi
     background: var(--primary-color);
     color: white;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(139, 69, 19, 0.2);
+    box-shadow: 0 10px 20px rgba(2, 132, 199, 0.2);
 }
 
 .contact-card-link i, .contact-card-address i { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 12px; transition: var(--transition); }
@@ -168,5 +163,4 @@ body { color: var(--text-dark); line-height: 1.6; background-color: var(--bg-whi
     .hero-btns { flex-direction: column; }
     .btn { width: 100%; }
     .carousel-slide { height: 350px; }
-    .price-main { font-size: 2.2rem; }
 }

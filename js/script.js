@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 5. CARRUSEL CON TRANSICIÓN FADE (Para 10 imágenes)
+    // 5. CARRUSEL CON TRANSICIÓN FADE (Escalable automáticamente a 25 fotos)
     const images = document.querySelectorAll('.carousel-img');
     const btnPrev = document.getElementById('btn-prev');
     const btnNext = document.getElementById('btn-next');
